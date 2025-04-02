@@ -1,12 +1,258 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{60CC2F40-4D5E-4D9F-BBCD-B8B6D66F051D}|PizzariaAPI\\PizzariaAPI.csproj|c:\\users\\wesle\\source\\uninoveprojeto\\pizzariaapi-\\pizzariaapi\\pizzariaapi\\models\\cupom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60CC2F40-4D5E-4D9F-BBCD-B8B6D66F051D}|PizzariaAPI\\PizzariaAPI.csproj|solutionrelative:pizzariaapi\\models\\cupom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CC2F40-4D5E-4D9F-BBCD-B8B6D66F051D}|PizzariaAPI\\PizzariaAPI.csproj|c:\\users\\wesle\\source\\uninoveprojeto\\pizzariaapi-\\pizzariaapi\\pizzariaapi\\models\\categoriaproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60CC2F40-4D5E-4D9F-BBCD-B8B6D66F051D}|PizzariaAPI\\PizzariaAPI.csproj|solutionrelative:pizzariaapi\\models\\categoriaproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CC2F40-4D5E-4D9F-BBCD-B8B6D66F051D}|PizzariaAPI\\PizzariaAPI.csproj|c:\\users\\wesle\\source\\uninoveprojeto\\pizzariaapi-\\pizzariaapi\\pizzariaapi\\models\\pagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60CC2F40-4D5E-4D9F-BBCD-B8B6D66F051D}|PizzariaAPI\\PizzariaAPI.csproj|solutionrelative:pizzariaapi\\models\\pagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CC2F40-4D5E-4D9F-BBCD-B8B6D66F051D}|PizzariaAPI\\PizzariaAPI.csproj|c:\\users\\wesle\\source\\uninoveprojeto\\pizzariaapi-\\pizzariaapi\\pizzariaapi\\models\\endereco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60CC2F40-4D5E-4D9F-BBCD-B8B6D66F051D}|PizzariaAPI\\PizzariaAPI.csproj|solutionrelative:pizzariaapi\\models\\endereco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CC2F40-4D5E-4D9F-BBCD-B8B6D66F051D}|PizzariaAPI\\PizzariaAPI.csproj|c:\\users\\wesle\\source\\uninoveprojeto\\pizzariaapi-\\pizzariaapi\\pizzariaapi\\services\\formapagamentoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60CC2F40-4D5E-4D9F-BBCD-B8B6D66F051D}|PizzariaAPI\\PizzariaAPI.csproj|solutionrelative:pizzariaapi\\services\\formapagamentoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CC2F40-4D5E-4D9F-BBCD-B8B6D66F051D}|PizzariaAPI\\PizzariaAPI.csproj|c:\\users\\wesle\\source\\uninoveprojeto\\pizzariaapi-\\pizzariaapi\\pizzariaapi\\interfaces\\iformapagamentoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60CC2F40-4D5E-4D9F-BBCD-B8B6D66F051D}|PizzariaAPI\\PizzariaAPI.csproj|solutionrelative:pizzariaapi\\interfaces\\iformapagamentoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CC2F40-4D5E-4D9F-BBCD-B8B6D66F051D}|PizzariaAPI\\PizzariaAPI.csproj|c:\\users\\wesle\\source\\uninoveprojeto\\pizzariaapi-\\pizzariaapi\\pizzariaapi\\interfaces\\ipagamentoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60CC2F40-4D5E-4D9F-BBCD-B8B6D66F051D}|PizzariaAPI\\PizzariaAPI.csproj|solutionrelative:pizzariaapi\\interfaces\\ipagamentoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CC2F40-4D5E-4D9F-BBCD-B8B6D66F051D}|PizzariaAPI\\PizzariaAPI.csproj|c:\\users\\wesle\\source\\uninoveprojeto\\pizzariaapi-\\pizzariaapi\\pizzariaapi\\models\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60CC2F40-4D5E-4D9F-BBCD-B8B6D66F051D}|PizzariaAPI\\PizzariaAPI.csproj|solutionrelative:pizzariaapi\\models\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CC2F40-4D5E-4D9F-BBCD-B8B6D66F051D}|PizzariaAPI\\PizzariaAPI.csproj|c:\\users\\wesle\\source\\uninoveprojeto\\pizzariaapi-\\pizzariaapi\\pizzariaapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60CC2F40-4D5E-4D9F-BBCD-B8B6D66F051D}|PizzariaAPI\\PizzariaAPI.csproj|solutionrelative:pizzariaapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CC2F40-4D5E-4D9F-BBCD-B8B6D66F051D}|PizzariaAPI\\PizzariaAPI.csproj|c:\\users\\wesle\\source\\uninoveprojeto\\pizzariaapi-\\pizzariaapi\\pizzariaapi\\data\\configuration\\pedidoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60CC2F40-4D5E-4D9F-BBCD-B8B6D66F051D}|PizzariaAPI\\PizzariaAPI.csproj|solutionrelative:pizzariaapi\\data\\configuration\\pedidoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CC2F40-4D5E-4D9F-BBCD-B8B6D66F051D}|PizzariaAPI\\PizzariaAPI.csproj|c:\\users\\wesle\\source\\uninoveprojeto\\pizzariaapi-\\pizzariaapi\\pizzariaapi\\data\\configuration\\categoriaprodutoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60CC2F40-4D5E-4D9F-BBCD-B8B6D66F051D}|PizzariaAPI\\PizzariaAPI.csproj|solutionrelative:pizzariaapi\\data\\configuration\\categoriaprodutoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CC2F40-4D5E-4D9F-BBCD-B8B6D66F051D}|PizzariaAPI\\PizzariaAPI.csproj|c:\\users\\wesle\\source\\uninoveprojeto\\pizzariaapi-\\pizzariaapi\\pizzariaapi\\models\\formapagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60CC2F40-4D5E-4D9F-BBCD-B8B6D66F051D}|PizzariaAPI\\PizzariaAPI.csproj|solutionrelative:pizzariaapi\\models\\formapagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CC2F40-4D5E-4D9F-BBCD-B8B6D66F051D}|PizzariaAPI\\PizzariaAPI.csproj|c:\\users\\wesle\\source\\uninoveprojeto\\pizzariaapi-\\pizzariaapi\\pizzariaapi\\pizzariaapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{60CC2F40-4D5E-4D9F-BBCD-B8B6D66F051D}|PizzariaAPI\\PizzariaAPI.csproj|solutionrelative:pizzariaapi\\pizzariaapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CC2F40-4D5E-4D9F-BBCD-B8B6D66F051D}|PizzariaAPI\\PizzariaAPI.csproj|c:\\users\\wesle\\source\\uninoveprojeto\\pizzariaapi-\\pizzariaapi\\pizzariaapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60CC2F40-4D5E-4D9F-BBCD-B8B6D66F051D}|PizzariaAPI\\PizzariaAPI.csproj|solutionrelative:pizzariaapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Endereco.cs",
+              "DocumentMoniker": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\Models\\Endereco.cs",
+              "RelativeDocumentMoniker": "PizzariaAPI\\Models\\Endereco.cs",
+              "ToolTip": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\Models\\Endereco.cs",
+              "RelativeToolTip": "PizzariaAPI\\Models\\Endereco.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T01:21:03.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Cupom.cs",
+              "DocumentMoniker": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\Models\\Cupom.cs",
+              "RelativeDocumentMoniker": "PizzariaAPI\\Models\\Cupom.cs",
+              "ToolTip": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\Models\\Cupom.cs",
+              "RelativeToolTip": "PizzariaAPI\\Models\\Cupom.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T01:21:02.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CategoriaProduto.cs",
+              "DocumentMoniker": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\Models\\CategoriaProduto.cs",
+              "RelativeDocumentMoniker": "PizzariaAPI\\Models\\CategoriaProduto.cs",
+              "ToolTip": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\Models\\CategoriaProduto.cs",
+              "RelativeToolTip": "PizzariaAPI\\Models\\CategoriaProduto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T01:21:01.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PedidoConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\Data\\Configuration\\PedidoConfiguration.cs",
+              "RelativeDocumentMoniker": "PizzariaAPI\\Data\\Configuration\\PedidoConfiguration.cs",
+              "ToolTip": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\Data\\Configuration\\PedidoConfiguration.cs",
+              "RelativeToolTip": "PizzariaAPI\\Data\\Configuration\\PedidoConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T00:44:19.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "PizzariaAPI\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "PizzariaAPI\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T00:43:52.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IFormaPagamentoService.cs",
+              "DocumentMoniker": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\Interfaces\\IFormaPagamentoService.cs",
+              "RelativeDocumentMoniker": "PizzariaAPI\\Interfaces\\IFormaPagamentoService.cs",
+              "ToolTip": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\Interfaces\\IFormaPagamentoService.cs",
+              "RelativeToolTip": "PizzariaAPI\\Interfaces\\IFormaPagamentoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T00:43:52.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormaPagamentoService.cs",
+              "DocumentMoniker": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\Services\\FormaPagamentoService.cs",
+              "RelativeDocumentMoniker": "PizzariaAPI\\Services\\FormaPagamentoService.cs",
+              "ToolTip": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\Services\\FormaPagamentoService.cs",
+              "RelativeToolTip": "PizzariaAPI\\Services\\FormaPagamentoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T00:43:52.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IPagamentoService.cs",
+              "DocumentMoniker": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\Interfaces\\IPagamentoService.cs",
+              "RelativeDocumentMoniker": "PizzariaAPI\\Interfaces\\IPagamentoService.cs",
+              "ToolTip": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\Interfaces\\IPagamentoService.cs",
+              "RelativeToolTip": "PizzariaAPI\\Interfaces\\IPagamentoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T00:43:52.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FormaPagamento.cs",
+              "DocumentMoniker": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\Models\\FormaPagamento.cs",
+              "RelativeDocumentMoniker": "PizzariaAPI\\Models\\FormaPagamento.cs",
+              "ToolTip": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\Models\\FormaPagamento.cs",
+              "RelativeToolTip": "PizzariaAPI\\Models\\FormaPagamento.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T00:43:52.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Pagamento.cs",
+              "DocumentMoniker": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\Models\\Pagamento.cs",
+              "RelativeDocumentMoniker": "PizzariaAPI\\Models\\Pagamento.cs",
+              "ToolTip": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\Models\\Pagamento.cs",
+              "RelativeToolTip": "PizzariaAPI\\Models\\Pagamento.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T00:43:52.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CategoriaProdutoConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\Data\\Configuration\\CategoriaProdutoConfiguration.cs",
+              "RelativeDocumentMoniker": "PizzariaAPI\\Data\\Configuration\\CategoriaProdutoConfiguration.cs",
+              "ToolTip": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\Data\\Configuration\\CategoriaProdutoConfiguration.cs",
+              "RelativeToolTip": "PizzariaAPI\\Data\\Configuration\\CategoriaProdutoConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T00:43:52.794Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Pedido.cs",
+              "DocumentMoniker": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\Models\\Pedido.cs",
+              "RelativeDocumentMoniker": "PizzariaAPI\\Models\\Pedido.cs",
+              "ToolTip": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\Models\\Pedido.cs",
+              "RelativeToolTip": "PizzariaAPI\\Models\\Pedido.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T00:43:52.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PizzariaAPI",
+              "DocumentMoniker": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\PizzariaAPI.csproj",
+              "RelativeDocumentMoniker": "PizzariaAPI\\PizzariaAPI.csproj",
+              "ToolTip": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\PizzariaAPI.csproj",
+              "RelativeToolTip": "PizzariaAPI\\PizzariaAPI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-28T00:43:52.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\Program.cs",
+              "RelativeDocumentMoniker": "PizzariaAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\Program.cs",
+              "RelativeToolTip": "PizzariaAPI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T00:43:45.497Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

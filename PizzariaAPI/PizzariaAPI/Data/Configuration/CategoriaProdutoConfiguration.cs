@@ -1,6 +1,6 @@
 ﻿namespace PizzariaAPI.Data.Configuration
 {
-    public class CategoriaProdutoCongfiguration
+    public class CategoriaProdutoConfiguration
     {
     }
 }
