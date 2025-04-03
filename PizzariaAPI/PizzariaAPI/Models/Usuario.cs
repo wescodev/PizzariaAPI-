@@ -3,9 +3,13 @@
     public class Usuario
     {
         public int IdUsuario { get; set; }
-        public Pessoa IdPessoa { get; set; }
+
+        public int IdPessoa { get; set; } // Chave estrangeira
+        public Pessoa Pessoa { get; set; } // Relacionamento
+
         public string UsuarioLogin { get; set; }
-        public Guid Senha { get; set; }
+        public string Senha { get; set; }
         public DateTime DataExpiracao { get; set; }
     }
+
 }

@@ -3,7 +3,14 @@
     public class PedidoItem
     {
         public int IdPedidoItem { get; set; }
-        public Pedido IdPedido { get; set; }
-        public Produto IdProduto { get; set; }
+
+        // Chaves estrangeiras
+        public int IdPedido { get; set; }
+        public int IdProduto { get; set; }
+
+        // Propriedades de navegação
+        public Pedido Pedido { get; set; }
+        public Produto Produto { get; set; }
     }
+
 }

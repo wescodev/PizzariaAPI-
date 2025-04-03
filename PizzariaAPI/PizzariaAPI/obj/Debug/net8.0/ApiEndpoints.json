@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "PizzariaAPI.Controllers.PessoaController",
+    "Method": "GetAll",
+    "RelativePath": "apiPessoa",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

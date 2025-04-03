@@ -3,37 +3,24 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using PizzariaAPI.Models;
 
-namespace PizzariaAPI.Data.Configuration
+namespace PizzariaAPI.Data.Configuration;
+
+public class PedidoConfiguration : IEntityTypeConfiguration<Pedido>
 {
-    public class PedidoConfiguration : IEntityTypeConfiguration<Pedido>
+    public void Configure(EntityTypeBuilder<Pedido> builder)
     {
-        public void Configure(EntityTypeBuilder<Pedido> builder)
-        {
-            builder.ToTable("Pedidos");
-            builder.HasKey(p => p.IdPedido);
+        // Define a tabela
+        builder.ToTable("Pedido");
 
-            builder.HasOne(p => p.FormaPagamento)
-                .WithMany()
-                .HasForeignKey(p => p.FormaPagamentoId)
-                .IsRequired();
+        // Define a chave primária
+        builder.HasKey(p => p.IdPedido);
 
-            builder.HasOne(p => p.Pessoa)
-                  .WithMany()
-                  .HasForeignKey(p => p.Pessoa);
-
-            builder.HasOne(p => p.Cupom)
-                .WithMany()
-                .HasForeignKey(p => p.Cupom)
-                .IsRequired();
-
-            builder.HasOne(p => p.Endereco)
-            .WithMany()
-            .HasForeignKey(p => p.Endereco)
-            .IsRequired();
-
-  
-
-
-        }
+        // Configura a chave estrangeira para Pessoa
+        builder.HasOne(p => p.Pessoa)  // Relacionamento com Pessoa
+               .WithMany()              // Uma Pessoa pode ter vários Pedidos
+               .HasForeignKey(p => p.IdPessoa) // Define a chave estrangeira
+               .IsRequired();           // Torna obrigatório
     }
 }
+
+
