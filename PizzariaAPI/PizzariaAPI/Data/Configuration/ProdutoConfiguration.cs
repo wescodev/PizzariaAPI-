@@ -9,7 +9,7 @@ public class ProdutoConfiguration : IEntityTypeConfiguration<Produto>
     public void Configure(EntityTypeBuilder<Produto> builder)
     {
         // Define a tabela no banco de dados
-        builder.ToTable("Produto");
+        builder.ToTable("PRODUTO");
 
         // Define a chave primária
         builder.HasKey(p => p.IdProduto);

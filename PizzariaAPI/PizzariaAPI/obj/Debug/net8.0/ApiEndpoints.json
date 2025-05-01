@@ -1,12 +1,38 @@
 [
   {
-    "ContainingType": "PizzariaAPI.Controllers.PessoaController",
-    "Method": "GetAll",
-    "RelativePath": "apiPessoa",
+    "ContainingType": "PizzariaAPI.Controllers.CategoriaProdutoController",
+    "Method": "ListarCategorias",
+    "RelativePath": "api/CategoriaProduto",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PizzariaAPI.Controllers.PessoaController",
+    "Method": "GetAll",
+    "RelativePath": "api/Pessoa",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PizzariaAPI.Controllers.PessoaController",
+    "Method": "CriarPessoaComEndereco",
+    "RelativePath": "api/Pessoa",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pessoa",
+        "Type": "PizzariaAPI.Models.Pessoa",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   }
 ]

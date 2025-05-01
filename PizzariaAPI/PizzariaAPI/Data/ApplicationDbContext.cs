@@ -19,4 +19,10 @@ public class ApplicationDbContext : DbContext
     public DbSet<PedidoItem> PedidoItem { get; set; }
     public DbSet<Endereco> Endereco { get; set; }
 
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder); // Chamada opcional, mas recomendada
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
+    }
+
 }

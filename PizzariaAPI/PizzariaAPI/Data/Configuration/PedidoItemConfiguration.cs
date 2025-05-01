@@ -9,7 +9,7 @@ namespace PizzariaAPI.Data.Configuration
         public void Configure(EntityTypeBuilder<PedidoItem> builder)
         {
             // Define a tabela no banco de dados
-            builder.ToTable("PedidoItem");
+            builder.ToTable("PEDIDO_ITEM");
 
             // Define a chave primária
             builder.HasKey(p => p.IdPedidoItem);

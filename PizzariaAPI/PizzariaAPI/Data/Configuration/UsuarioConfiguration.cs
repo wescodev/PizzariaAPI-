@@ -9,7 +9,7 @@ public class UsuarioConfiguration : IEntityTypeConfiguration<Usuario>
     public void Configure(EntityTypeBuilder<Usuario> builder)
     {
         // Define a tabela no banco de dados
-        builder.ToTable("Usuario");
+        builder.ToTable("USUARIO");
 
         // Define a chave primária
         builder.HasKey(u => u.IdUsuario);

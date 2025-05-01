@@ -8,7 +8,7 @@ public class CupomConfiguration : IEntityTypeConfiguration<Cupom>
 {
     public void Configure(EntityTypeBuilder<Cupom> builder)
     {
-        builder.ToTable("Cupom");
+        builder.ToTable("CUPOM");
 
         builder.HasKey(c => c.IdCupom);
 

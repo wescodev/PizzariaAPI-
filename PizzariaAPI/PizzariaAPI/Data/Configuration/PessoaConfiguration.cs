@@ -9,7 +9,7 @@ public class PessoaConfiguration : IEntityTypeConfiguration<Pessoa>
     public void Configure(EntityTypeBuilder<Pessoa> builder)
     {
         // Define a tabela no banco de dados
-        builder.ToTable("Pessoa");
+        builder.ToTable("PESSOA");
 
         // Define a chave primária
         builder.HasKey(p => p.IdPessoa);

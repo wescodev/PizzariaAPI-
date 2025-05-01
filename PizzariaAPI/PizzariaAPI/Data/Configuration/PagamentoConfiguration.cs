@@ -9,7 +9,7 @@ public class PagamentoConfiguration : IEntityTypeConfiguration<Pagamento>
     public void Configure(EntityTypeBuilder<Pagamento> builder)
     {
         // Define a tabela no banco de dados
-        builder.ToTable("Pagamentos");
+        builder.ToTable("PAGAMENTO");
 
         // Define a chave primária
         builder.HasKey(p => p.IdPagamento);

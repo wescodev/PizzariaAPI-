@@ -10,7 +10,7 @@ public class PedidoConfiguration : IEntityTypeConfiguration<Pedido>
     public void Configure(EntityTypeBuilder<Pedido> builder)
     {
         // Define a tabela
-        builder.ToTable("Pedido");
+        builder.ToTable("PEDIDO");
 
         // Define a chave primária
         builder.HasKey(p => p.IdPedido);
