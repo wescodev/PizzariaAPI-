@@ -122,8 +122,7 @@
               "RelativeToolTip": "PizzariaAPI\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-03T02:31:59.359Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T02:31:59.359Z"
             },
             {
               "$type": "Document",
@@ -148,8 +147,7 @@
               "RelativeToolTip": "PizzariaAPI\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T02:30:20.833Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T02:30:20.833Z"
             },
             {
               "$type": "Document",
@@ -161,8 +159,7 @@
               "RelativeToolTip": "PizzariaAPI\\Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T02:29:43.188Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T02:29:43.188Z"
             },
             {
               "$type": "Document",
@@ -174,8 +171,7 @@
               "RelativeToolTip": "PizzariaAPI\\Services\\FormaPagamentoService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T02:26:57.745Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T02:26:57.745Z"
             },
             {
               "$type": "Document",
@@ -187,8 +183,7 @@
               "RelativeToolTip": "PizzariaAPI\\Models\\Pedido.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T02:26:52.926Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T02:26:52.926Z"
             },
             {
               "$type": "Document",
@@ -200,8 +195,7 @@
               "RelativeToolTip": "PizzariaAPI\\Models\\CategoriaProduto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T02:26:49.048Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T02:26:49.048Z"
             },
             {
               "$type": "Document",
@@ -213,8 +207,7 @@
               "RelativeToolTip": "PizzariaAPI\\Models\\Cupom.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T02:21:08.028Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T02:21:08.028Z"
             },
             {
               "$type": "Document",
@@ -226,8 +219,7 @@
               "RelativeToolTip": "PizzariaAPI\\Data\\Configuration\\PagamentoConfiguration.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAgwA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T02:22:48.754Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T02:22:48.754Z"
             },
             {
               "$type": "Document",
@@ -239,8 +231,7 @@
               "RelativeToolTip": "PizzariaAPI\\Data\\Configuration\\UsuarioConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T02:26:17.463Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T02:26:17.463Z"
             },
             {
               "$type": "Document",
@@ -252,8 +243,7 @@
               "RelativeToolTip": "PizzariaAPI\\Models\\Endereco.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T02:15:20.984Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T02:15:20.984Z"
             },
             {
               "$type": "Document",
@@ -265,8 +255,7 @@
               "RelativeToolTip": "PizzariaAPI\\Models\\Pagamento.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T02:22:52.061Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T02:22:52.061Z"
             },
             {
               "$type": "Document",
@@ -278,8 +267,7 @@
               "RelativeToolTip": "PizzariaAPI\\Models\\PedidoItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T02:24:09.023Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T02:24:09.023Z"
             },
             {
               "$type": "Document",
@@ -291,8 +279,7 @@
               "RelativeToolTip": "PizzariaAPI\\Models\\Produto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T02:25:21.695Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T02:25:21.695Z"
             },
             {
               "$type": "Document",
@@ -304,8 +291,7 @@
               "RelativeToolTip": "PizzariaAPI\\Models\\Usuario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T02:25:50.613Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T02:25:50.613Z"
             },
             {
               "$type": "Document",
@@ -317,8 +303,7 @@
               "RelativeToolTip": "PizzariaAPI\\Models\\Pessoa.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T02:24:37.431Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T02:24:37.431Z"
             },
             {
               "$type": "Document",
@@ -330,8 +315,7 @@
               "RelativeToolTip": "PizzariaAPI\\Data\\Configuration\\PessoaConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T02:24:34.994Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T02:24:34.994Z"
             },
             {
               "$type": "Document",
@@ -343,8 +327,7 @@
               "RelativeToolTip": "PizzariaAPI\\Data\\Configuration\\PedidoItemConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T02:20:04.605Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T02:20:04.605Z"
             },
             {
               "$type": "Document",
@@ -356,8 +339,7 @@
               "RelativeToolTip": "PizzariaAPI\\Models\\FormaPagamento.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T02:21:27.32Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T02:21:27.32Z"
             },
             {
               "$type": "Document",
@@ -369,8 +351,7 @@
               "RelativeToolTip": "PizzariaAPI\\Data\\Configuration\\EnderecoConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T02:26:42.984Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T02:26:42.984Z"
             },
             {
               "$type": "Document",
@@ -382,8 +363,7 @@
               "RelativeToolTip": "PizzariaAPI\\Data\\Configuration\\CategoriaProdutoConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T02:17:32.347Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T02:17:32.347Z"
             },
             {
               "$type": "Document",
@@ -395,8 +375,7 @@
               "RelativeToolTip": "PizzariaAPI\\Data\\Configuration\\ProdutoConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T02:25:17.223Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T02:25:17.223Z"
             },
             {
               "$type": "Document",
@@ -408,8 +387,7 @@
               "RelativeToolTip": "PizzariaAPI\\Data\\Configuration\\CupomConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T02:17:45.761Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T02:17:45.761Z"
             },
             {
               "$type": "Document",
@@ -421,8 +399,7 @@
               "RelativeToolTip": "PizzariaAPI\\Data\\Configuration\\PedidoConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T02:23:57.651Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T02:23:57.651Z"
             },
             {
               "$type": "Document",
@@ -434,8 +411,7 @@
               "RelativeToolTip": "PizzariaAPI\\Data\\Configuration\\FormaPagamentoConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T02:21:22.659Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T02:21:22.659Z"
             }
           ]
         }
