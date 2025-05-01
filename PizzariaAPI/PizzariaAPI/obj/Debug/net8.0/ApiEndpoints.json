@@ -10,6 +10,38 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "PizzariaAPI.Controllers.ClienteController",
+    "Method": "CriarCadastroCliente",
+    "RelativePath": "api/Cliente/CriarCadastroCliente",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cadastro",
+        "Type": "PizzariaAPI.DTOS.ClienteCadastroDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PizzariaAPI.Controllers.ClienteController",
+    "Method": "VerificarCadastroCliente",
+    "RelativePath": "api/Cliente/VerificarCadastroCliente",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cpf",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "PizzariaAPI.Controllers.PessoaController",
     "Method": "GetAll",
     "RelativePath": "api/Pessoa",
