@@ -1,12 +1,34 @@
 [
   {
-    "ContainingType": "PizzariaAPI.Controllers.CategoriaProdutoController",
-    "Method": "ListarCategorias",
-    "RelativePath": "api/CategoriaProduto",
-    "HttpMethod": "GET",
+    "ContainingType": "PizzariaAPI.Controllers.AutenticacaoController",
+    "Method": "AtualizarSenha",
+    "RelativePath": "api/Autenticacao/AtualizarSenha",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "usuario",
+        "Type": "PizzariaAPI.DTOS.AtualizarSenhaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PizzariaAPI.Controllers.AutenticacaoController",
+    "Method": "Login",
+    "RelativePath": "api/Autenticacao/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "PizzariaAPI.DTOS.LoginDTO",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -27,41 +49,15 @@
   },
   {
     "ContainingType": "PizzariaAPI.Controllers.ClienteController",
-    "Method": "VerificarCadastroCliente",
-    "RelativePath": "api/Cliente/VerificarCadastroCliente",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "cpf",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "PizzariaAPI.Controllers.PessoaController",
-    "Method": "GetAll",
-    "RelativePath": "api/Pessoa",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "PizzariaAPI.Controllers.PessoaController",
-    "Method": "CriarPessoaComEndereco",
-    "RelativePath": "api/Pessoa",
+    "Method": "CriarUsuarioCliente",
+    "RelativePath": "api/Cliente/CriarUsuarioLogin",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "pessoa",
-        "Type": "PizzariaAPI.Models.Pessoa",
+        "Name": "usuario",
+        "Type": "PizzariaAPI.DTOS.UsuarioCadastroDTO",
         "IsRequired": true
       }
     ],
