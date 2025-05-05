@@ -8,15 +8,14 @@ public class FormaPagamentoConfiguration : IEntityTypeConfiguration<FormaPagamen
 {
     public void Configure(EntityTypeBuilder<FormaPagamento> builder)
     {
-        // Define a tabela no banco de dados
-        builder.ToTable("FormaPagamento");
+      
+        builder.ToTable("forma_pagamento");
 
-        // Define a chave primária
+       
         builder.HasKey(f => f.IdFormaPagamento);
 
-        // Configuração do campo NomeFormaPagamento
         builder.Property(f => f.NmFormaPagamento)
-               .HasColumnType("VARCHAR(50)") // Limite de 50 caracteres
+               .HasColumnType("VARCHAR(50)") 
                .IsRequired();
     }
 }

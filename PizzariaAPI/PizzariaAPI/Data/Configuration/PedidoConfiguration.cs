@@ -9,17 +9,15 @@ public class PedidoConfiguration : IEntityTypeConfiguration<Pedido>
 {
     public void Configure(EntityTypeBuilder<Pedido> builder)
     {
-        // Define a tabela
-        builder.ToTable("PEDIDO");
+        builder.ToTable("pedido");
 
-        // Define a chave primária
+
         builder.HasKey(p => p.IdPedido);
 
-        // Configura a chave estrangeira para Pessoa
-        builder.HasOne(p => p.Pessoa)  // Relacionamento com Pessoa
-               .WithMany()              // Uma Pessoa pode ter vários Pedidos
-               .HasForeignKey(p => p.IdPessoa) // Define a chave estrangeira
-               .IsRequired();           // Torna obrigatório
+        builder.HasOne(p => p.Pessoa)  
+               .WithMany()              
+               .HasForeignKey(p => p.IdPessoa) 
+               .IsRequired();           
     }
 }
 

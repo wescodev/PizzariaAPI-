@@ -109,3 +109,10 @@ C:\Users\wesle\source\UninoveProjeto2\PizzariaAPI-\PizzariaAPI\PizzariaAPI\obj\D
 C:\Users\wesle\source\UninoveProjeto2\PizzariaAPI-\PizzariaAPI\PizzariaAPI\obj\Debug\net8.0\ref\PizzariaAPI.dll
 C:\Users\wesle\source\UninoveProjeto2\PizzariaAPI-\PizzariaAPI\PizzariaAPI\bin\Debug\net8.0\MySqlConnector.dll
 C:\Users\wesle\source\UninoveProjeto2\PizzariaAPI-\PizzariaAPI\PizzariaAPI\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\wesle\source\UninoveProjeto2\PizzariaAPI-\PizzariaAPI\PizzariaAPI\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\wesle\source\UninoveProjeto2\PizzariaAPI-\PizzariaAPI\PizzariaAPI\bin\Debug\net8.0\MailKit.dll
+C:\Users\wesle\source\UninoveProjeto2\PizzariaAPI-\PizzariaAPI\PizzariaAPI\bin\Debug\net8.0\MimeKit.dll
+C:\Users\wesle\source\UninoveProjeto2\PizzariaAPI-\PizzariaAPI\PizzariaAPI\bin\Debug\net8.0\System.Formats.Asn1.dll
+C:\Users\wesle\source\UninoveProjeto2\PizzariaAPI-\PizzariaAPI\PizzariaAPI\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\wesle\source\UninoveProjeto2\PizzariaAPI-\PizzariaAPI\PizzariaAPI\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\wesle\source\UninoveProjeto2\PizzariaAPI-\PizzariaAPI\PizzariaAPI\bin\Debug\net8.0\BCrypt.Net-Next.dll

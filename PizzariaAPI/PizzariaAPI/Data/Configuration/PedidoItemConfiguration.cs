@@ -8,25 +8,22 @@ namespace PizzariaAPI.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<PedidoItem> builder)
         {
-            // Define a tabela no banco de dados
-            builder.ToTable("PEDIDO_ITEM");
 
-            // Define a chave primária
+            builder.ToTable("pedido_item");
+
             builder.HasKey(p => p.IdPedidoItem);
 
-            // Configuração da chave estrangeira com Pedido
             builder.HasOne(p => p.Pedido)
-                   .WithMany() // Um pedido pode ter vários itens
+                   .WithMany() 
                    .HasForeignKey(p => p.IdPedido)
                    .IsRequired()
-                   .OnDelete(DeleteBehavior.Cascade); // Exclusão em cascata
+                   .OnDelete(DeleteBehavior.Cascade); 
 
-            // Configuração da chave estrangeira com Produto
             builder.HasOne(p => p.Produto)
-                   .WithMany() // Um produto pode estar em vários pedidos
+                   .WithMany() 
                    .HasForeignKey(p => p.IdProduto)
                    .IsRequired()
-                   .OnDelete(DeleteBehavior.Restrict); // Restrição para evitar exclusão acidental
+                   .OnDelete(DeleteBehavior.Restrict); 
         }
     }
 

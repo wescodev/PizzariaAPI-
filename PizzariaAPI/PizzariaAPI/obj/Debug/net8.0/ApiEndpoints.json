@@ -1,22 +1,22 @@
 [
   {
-    "ContainingType": "PizzariaAPI.Controllers.AutenticacaoController",
-    "Method": "AtualizarSenha",
-    "RelativePath": "api/Autenticacao/AtualizarSenha",
-    "HttpMethod": "PUT",
+    "ContainingType": "PizzariaAPI.Controllers.CadastroLogin.AutenticacaoController",
+    "Method": "AlterarSenha",
+    "RelativePath": "api/Autenticacao/alterarSenha",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "usuario",
-        "Type": "PizzariaAPI.DTOS.AtualizarSenhaDTO",
+        "Name": "request",
+        "Type": "PizzariaAPI.DTOS.AlterarSenhaRequestDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "PizzariaAPI.Controllers.AutenticacaoController",
+    "ContainingType": "PizzariaAPI.Controllers.CadastroLogin.AutenticacaoController",
     "Method": "Login",
     "RelativePath": "api/Autenticacao/Login",
     "HttpMethod": "POST",
@@ -32,7 +32,59 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "PizzariaAPI.Controllers.ClienteController",
+    "ContainingType": "PizzariaAPI.Controllers.CadastroLogin.AutenticacaoController",
+    "Method": "RedefinirSenha",
+    "RelativePath": "api/Autenticacao/RedefinirSenha",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PizzariaAPI.Controllers.CadastroLogin.AutenticacaoController",
+    "Method": "SolicitarAlteracaoSenha",
+    "RelativePath": "api/Autenticacao/SolicitarAlteracaoSenha",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PizzariaAPI.Controllers.Produto.CategoriaProdutoController",
+    "Method": "ObterCategoriasAsync",
+    "RelativePath": "api/CategoriaProduto",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[PizzariaAPI.DTOS.CategoriaProdutoDTO, PizzariaAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PizzariaAPI.Controllers.CadastroLogin.ClienteController",
     "Method": "CriarCadastroCliente",
     "RelativePath": "api/Cliente/CriarCadastroCliente",
     "HttpMethod": "POST",
@@ -42,22 +94,6 @@
       {
         "Name": "cadastro",
         "Type": "PizzariaAPI.DTOS.ClienteCadastroDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "PizzariaAPI.Controllers.ClienteController",
-    "Method": "CriarUsuarioCliente",
-    "RelativePath": "api/Cliente/CriarUsuarioLogin",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "usuario",
-        "Type": "PizzariaAPI.DTOS.UsuarioCadastroDTO",
         "IsRequired": true
       }
     ],

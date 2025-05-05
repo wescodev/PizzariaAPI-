@@ -1,4 +1,6 @@
-﻿namespace PizzariaAPI.DTOS
+﻿using PizzariaAPI.Models;
+
+namespace PizzariaAPI.DTOS
 {
     public class ClienteCadastroDTO
     {
@@ -6,13 +8,12 @@
         public string Email { get; set; }
         public string CPF { get; set; }
         public string Telefone { get; set; }
-
         public string NmEndereco { get; set; }
         public string CEP { get; set; }
         public int Numero { get; set; }
         public string Cidade { get; set; }
-
-        //public string Login { get; set; }
-        //public string Senha { get; set; }
+        public string Senha { get; set; }
+        public string ConfirmarSenha { get; set; }
     }
+
 }

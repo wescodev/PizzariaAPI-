@@ -3,64 +3,123 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PizzariaAPI.Data;
 using PizzariaAPI.DTOS;
+using PizzariaAPI.Interfaces.IRepositories;
+using PizzariaAPI.Services;
 
-namespace PizzariaAPI.Controllers.CadastroLogin
+namespace PizzariaAPI.Controllers.CadastroLogin;
+
+[Route("api/[controller]")]
+[ApiController]
+public class AutenticacaoController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class AutenticacaoController : ControllerBase
+    private readonly IPessoaRepository _pessoaRepository;
+    private readonly IUsuarioRepository _usuarioRepository;
+    private readonly EmailService _emailService;
+    public AutenticacaoController(IPessoaRepository pessoaRepository, IUsuarioRepository usuarioRepository, EmailService emailService)
     {
-        private readonly ApplicationDbContext _context;
+        _pessoaRepository = pessoaRepository;
+        _emailService = emailService;
+        _usuarioRepository = usuarioRepository;
+    }
 
-        public AutenticacaoController(ApplicationDbContext context)
+    [HttpPost("Login")]
+    public async Task<IActionResult> Login([FromBody] LoginDTO login)
+    {
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
+
+        var pessoa = await _pessoaRepository.GetByEmailOrPhoneAsync(login.Login);
+
+
+        if (pessoa == null)
+            return Unauthorized(new { message = "Usuário ou senha incorretos" });
+
+        var usuario = await _usuarioRepository.GetByPessoaIdAsync(pessoa.IdPessoa);
+   
+        if (usuario == null || usuario.Senha != login.Senha)
+            return Unauthorized(new { message = "Usuário ou senha incorretos" });
+
+
+        return Ok(new { message = "Login bem-sucedido!" });
+    }
+
+    [HttpPost("SolicitarAlteracaoSenha")]
+    public async Task<IActionResult> SolicitarAlteracaoSenha([FromBody] string email)
+    {
+        var pessoa = await _pessoaRepository.GetByEmailAsync(email);
+
+        if (pessoa == null)
+            return NotFound(new { message = "E-mail não encontrado." });
+
+        try
         {
-            _context = context;
+            var linkAlteracaoSenha = $"http://localhost:5000/RedefinirSenha?email={pessoa.Email}";
+            var assunto = "Solicitação de Alteração de Senha";
+            var mensagem = $"Olá {pessoa.Nome},\n\nVocê solicitou a alteração de senha. Clique no link abaixo para redefinir sua senha:\n\n{linkAlteracaoSenha}";
+
+            await _emailService.EnviarEmailAsync(pessoa.Email, assunto, mensagem);
+
+            return Ok(new { message = "E-mail de solicitação de alteração de senha enviado." });
         }
-
-        [HttpPost("Login")]
-        public async Task<IActionResult> Login([FromBody] LoginDTO login)
+        catch (Exception ex)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var usuario = await _context.Usuario
-                .FirstOrDefaultAsync(u => u.UsuarioLogin == login.Login);
-
-            if (usuario == null || usuario.Senha != login.Senha)
-                return Unauthorized(new { message = "Usuário ou senha incorretos" });
-
-
-            return Ok(new { message = "Login bem-sucedido!" });
-        }
-
-
-
-        [HttpPut("AtualizarSenha")]
-        public async Task<IActionResult> AtualizarSenha([FromBody] AtualizarSenhaDTO usuario)
-        {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var pessoa = await _context.Pessoa.FirstOrDefaultAsync(p => p.CPF == usuario.CPF);
-
-            var existeUsuario = await _context.Usuario.FirstOrDefaultAsync(u => u.UsuarioLogin == usuario.Usuario);
-
-            if (pessoa == null || existeUsuario == null || existeUsuario.IdPessoa != pessoa.IdPessoa)
-                return NotFound(new { message = "Usuario ou CPF não encontrado." });
-
-            try
-            {
-                existeUsuario.Senha = usuario.Senha;
-
-                await _context.SaveChangesAsync();
-
-                return Ok(new { message = "Senha atualizada com sucesso!" });
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"Erro ao atualizar login: {ex.Message}");
-            }
-
+            return StatusCode(500, new { message = $"Erro ao enviar o e-mail: {ex.Message}" });
         }
     }
+
+
+
+    [HttpGet("RedefinirSenha")]
+    public async Task<IActionResult> RedefinirSenha([FromQuery] string email)
+    {
+        // Verifica se o e-mail existe no banco
+        var pessoa = await _pessoaRepository.GetByEmailAsync(email);
+
+        if (pessoa == null)
+            return NotFound(new { message = "E-mail não encontrado ou inválido." });
+
+        try
+        {
+            // Redireciona para a página de alterar senha
+            // Aqui usamos o endereço local do seu HTML (apenas para teste local!)
+            var paginaAlterarSenha = $"file:///C:/Users/wesle/Downloads/cs-20250503T030623Z-001/cs/alterarSenha.html?email={email}";
+
+            return Redirect(paginaAlterarSenha);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { message = $"Erro ao redirecionar: {ex.Message}" });
+        }
+    }
+
+
+
+
+    [HttpPost("alterarSenha")]
+    public async Task<IActionResult> AlterarSenha([FromBody] AlterarSenhaRequestDTO request)
+    {
+        if (string.IsNullOrWhiteSpace(request.Email) || string.IsNullOrWhiteSpace(request.NovaSenha))
+            return BadRequest(new { message = "E-mail e nova senha são obrigatórios." });
+
+        var pessoa = await _pessoaRepository.GetByEmailAsync(request.Email);
+        if (pessoa == null)
+            return NotFound(new { message = "E-mail não encontrado." });
+
+        try
+        {
+            await _usuarioRepository.AlterarSenhaAsync(pessoa.IdPessoa, request.NovaSenha);
+
+            return Ok(new { message = "Senha alterada com sucesso." });
+        }
+        catch (KeyNotFoundException)
+        {
+            return NotFound(new { message = "Usuário vinculado não encontrado." });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { message = $"Erro ao alterar senha: {ex.Message}" });
+        }
+    }
+
+
 }
