@@ -33,47 +33,47 @@ namespace PizzariaAPI.Services
             using var transaction = await _context.Database.BeginTransactionAsync();
 
             try
+        {
+            var endereco = new Endereco
             {
-                var endereco = new Endereco
-                {
-                    NmEndereco = cadastro.NmEndereco,
-                    CEP = cadastro.CEP,
-                    Numero = cadastro.Numero,
-                    Cidade = cadastro.Cidade
-                };
-                _context.Endereco.Add(endereco);
-                await _context.SaveChangesAsync();
+                NmEndereco = cadastro.NmEndereco,
+                CEP = cadastro.CEP,
+                Numero = cadastro.Numero,
+                Cidade = cadastro.Cidade
+            };
+            _context.Endereco.Add(endereco);
+            await _context.SaveChangesAsync();
 
-                var pessoa = new Pessoa
-                {
-                    Nome = cadastro.Nome,
-                    Email = cadastro.Email,
-                    CPF = cadastro.CPF,
-                    Telefone = cadastro.Telefone,
-                    IdEndereco = endereco.IdEndereco
-                };
-                _context.Pessoa.Add(pessoa);
-                await _context.SaveChangesAsync();
-
-                var novoUsuario = new Usuario
-                {
-                    IdPessoa = pessoa.IdPessoa,
-                    UsuarioLogin = pessoa.Email,
-                    Senha = cadastro.Senha,
-                    DataExpiracao = DateTime.Now.AddMonths(1)
-                };
-                _context.Usuario.Add(novoUsuario);
-                await _context.SaveChangesAsync();
-
-                await transaction.CommitAsync();
-                return "Login cadastrado com sucesso!";
-            }
-            catch (Exception)
+            var pessoa = new Pessoa
             {
-                await transaction.RollbackAsync();
-                throw; 
-            }
+                Nome = cadastro.Nome,
+                Email = cadastro.Email,
+                CPF = cadastro.CPF,
+                Telefone = cadastro.Telefone,
+                IdEndereco = endereco.IdEndereco
+            };
+            _context.Pessoa.Add(pessoa);
+            await _context.SaveChangesAsync();
+
+            var novoUsuario = new Usuario
+            {
+                IdPessoa = pessoa.IdPessoa,
+                UsuarioLogin = pessoa.Email,
+                Senha = cadastro.Senha,
+                DataExpiracao = DateTime.Now.AddMonths(1)
+            };
+            _context.Usuario.Add(novoUsuario);
+            await _context.SaveChangesAsync();
+
+            await transaction.CommitAsync();
+            return "Login cadastrado com sucesso!";
         }
-    }
+        catch (Exception)
+        {
+            await transaction.RollbackAsync();
+            throw; // repassa o erro para o Controller
+        }
+    
+        }
     }
 }

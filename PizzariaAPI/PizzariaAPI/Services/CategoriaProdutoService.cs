@@ -23,5 +23,10 @@ namespace PizzariaAPI.Services
                 Descricao = c.Descricao ?? string.Empty,
             }).ToList();
         }
+
+        public Task<List<ProdutoDTO>> ObterPorCategoriaIdAsync(int idCategoria)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

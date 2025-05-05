@@ -32,6 +32,8 @@ builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
 //registro de servico
 builder.Services.AddScoped<ICategoriaProdutoService, CategoriaProdutoService>();
+builder.Services.AddScoped<IProdutoService, ProdutoService>();
+builder.Services.AddScoped<IClienteService, ClienteService>();
 
 
 var app = builder.Build();

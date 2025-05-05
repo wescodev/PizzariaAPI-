@@ -13,7 +13,7 @@ public class ProdutoConfiguration : IEntityTypeConfiguration<Produto>
 
         builder.HasKey(p => p.IdProduto);
 
-        builder.Property(p => p.Nome)
+        builder.Property(p => p.NmProduto)
                .IsRequired()
                .HasMaxLength(100);
 

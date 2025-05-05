@@ -3,7 +3,7 @@
 public class Produto
 {
     public int IdProduto { get; set; }
-    public string Nome { get; set; }
+    public string NmProduto { get; set; }
 
     public int IdCategoria { get; set; } // Chave estrangeira
     public CategoriaProduto Categoria { get; set; } // Relacionamento
