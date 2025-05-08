@@ -17,7 +17,25 @@ public class PedidoConfiguration : IEntityTypeConfiguration<Pedido>
         builder.HasOne(p => p.Pessoa)  
                .WithMany()              
                .HasForeignKey(p => p.IdPessoa) 
-               .IsRequired();           
+               .IsRequired();      
+        
+        builder.HasOne(p => p.Cupom)
+            .WithMany()
+            .HasForeignKey(p => p.IdCupom)
+            .IsRequired()
+            .OnDelete(DeleteBehavior.Restrict);
+
+        builder.HasOne(p => p.Endereco)
+               .WithMany()
+               .HasForeignKey(p => p.IdEndereco)
+               .IsRequired()
+               .OnDelete(DeleteBehavior.Restrict);
+
+        builder.HasOne(p => p.FormaPagamento)
+               .WithMany()
+               .HasForeignKey(p => p.IdFormaPagamento)
+               .IsRequired()
+               .OnDelete(DeleteBehavior.Restrict);
     }
 }
 
