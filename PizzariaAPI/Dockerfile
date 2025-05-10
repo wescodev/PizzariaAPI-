@@ -9,6 +9,7 @@ COPY PizzariaAPI/PizzariaAPI.csproj ./
 RUN dotnet restore "PizzariaAPI.csproj"
 COPY . .
 WORKDIR "/src/."
+RUN rm -rf /src/obj
 RUN dotnet build "PizzariaAPI.csproj" -c Release -o /app/build
 
 FROM build AS publish
