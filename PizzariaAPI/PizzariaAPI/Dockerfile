@@ -1,9 +1,7 @@
-# Definindo a imagem base para o .NET 8
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 EXPOSE 80
 
-# Usando o SDK do .NET 8
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 COPY ["PizzariaAPI/PizzariaAPI.csproj", "PizzariaAPI/"]
