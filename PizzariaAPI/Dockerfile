@@ -1,22 +1,25 @@
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-WORKDIR /app
-EXPOSE 80
-EXPOSE 443
-
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /src
-COPY PizzariaAPI/PizzariaAPI.csproj ./
-RUN rm -rf /src/obj
-RUN dotnet restore "PizzariaAPI.csproj"
-COPY . .
-WORKDIR "/src/."
-RUN rm -rf /src/obj
-RUN dotnet build "PizzariaAPI.csproj" -c Release -o /app/build
-
-FROM build AS publish
-RUN dotnet publish "PizzariaAPI.csproj" -c Release -o /app/publish /p:UseAppHost=false
-
-FROM base AS final
 WORKDIR /app
-COPY --from=publish /app/publish .
+
+# Copiar apenas o arquivo de projeto para restauração
+COPY PizzariaAPI/PizzariaAPI.csproj ./
+RUN dotnet restore
+
+# Copiar todo o código-fonte
+COPY PizzariaAPI ./PizzariaAPI
+COPY *.cs ./
+COPY *.json ./
+
+# Definir o diretório de trabalho para a build
+WORKDIR /app/PizzariaAPI
+
+# Remover a pasta obj ANTES da build
+RUN rm -rf obj
+
+# Build da aplicação
+RUN dotnet build -c Release -o /app/out
+
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+WORKDIR /app
+COPY --from=build /app/out ./
 ENTRYPOINT ["dotnet", "PizzariaAPI.dll"]
