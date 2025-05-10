@@ -8,15 +8,7 @@ WORKDIR /src
 COPY PizzariaAPI/PizzariaAPI.csproj ./
 RUN rm -rf /src/obj
 RUN dotnet restore "PizzariaAPI.csproj"
-COPY PizzariaAPI ./PizzariaAPI
-COPY *.cs ./
-# Copie outras pastas de código-fonte conforme necessário (Repositories, Services, Controllers, etc.)
-# Exemplo: COPY Repositories ./Repositories
-#          COPY Services ./Services
-#          COPY Controllers ./Controllers
-COPY appsettings*.json ./
-COPY *.json ./
-
+COPY . .
 WORKDIR "/src/."
 RUN rm -rf /src/obj
 RUN dotnet build "PizzariaAPI.csproj" -c Release -o /app/build
