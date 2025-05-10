@@ -7,19 +7,13 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copiando o arquivo .csproj para o container
+# Copiando o arquivo .csproj e restaurando dependências
 COPY PizzariaAPI/PizzariaAPI.csproj PizzariaAPI/
+RUN dotnet restore "PizzariaAPI-/PizzariaAPI/PizzariaAPIPizzariaAPI.csproj"
 
-# Executando o comando restore no arquivo .csproj copiado
-RUN dotnet restore "PizzariaAPI/PizzariaAPI/PizzariaAPI.csproj"
-
-# Copiando o restante dos arquivos do projeto
+# Copiando o restante dos arquivos e construindo o projeto
 COPY . .
-
-# Definindo o diretório de trabalho do projeto
 WORKDIR /src/PizzariaAPI
-
-# Construindo o projeto
 RUN dotnet build "PizzariaAPI.csproj" -c Release -o /app/build
 
 # Publicando a aplicação
