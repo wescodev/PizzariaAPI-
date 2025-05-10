@@ -2868,11 +2868,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wesle\\source\\UninoveProjeto2\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\PizzariaAPI.csproj",
+      "projectUniqueName": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\PizzariaAPI.csproj",
       "projectName": "PizzariaAPI",
-      "projectPath": "C:\\Users\\wesle\\source\\UninoveProjeto2\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\PizzariaAPI.csproj",
+      "projectPath": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\PizzariaAPI.csproj",
       "packagesPath": "C:\\Users\\wesle\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wesle\\source\\UninoveProjeto2\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\obj\\",
+      "outputPath": "C:\\Users\\wesle\\source\\UninoveProjeto\\PizzariaAPI-\\PizzariaAPI\\PizzariaAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
