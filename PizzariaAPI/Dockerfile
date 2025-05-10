@@ -2,7 +2,7 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
 # Copiar a pasta que contém o arquivo de projeto
-COPY PizzariaAPI/PizzariaAPI ./PizzariaAPI
+COPY PizzariaAPI/PizzariaAPI ./
 
 # Navegar para a pasta do projeto
 WORKDIR /app/PizzariaAPI
