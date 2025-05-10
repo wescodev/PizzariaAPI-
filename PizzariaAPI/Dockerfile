@@ -1,23 +1,23 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
-# Copiar apenas o arquivo de projeto para restauração
-COPY PizzariaAPI/PizzariaAPI.csproj ./
-RUN dotnet restore
+# Copiar a pasta que contém o arquivo de projeto
+COPY PizzariaAPI/PizzariaAPI ./PizzariaAPI
 
-# Copiar todo o código-fonte
-COPY PizzariaAPI ./PizzariaAPI
-COPY *.cs ./
-COPY *.json ./
-
-# Definir o diretório de trabalho para a build
+# Navegar para a pasta do projeto
 WORKDIR /app/PizzariaAPI
+
+# Restaurar as dependências
+RUN dotnet restore PizzariaAPI.csproj
+
+# Copiar todo o código-fonte (agora no contexto correto)
+COPY . ./
 
 # Remover a pasta obj ANTES da build
 RUN rm -rf obj
 
 # Build da aplicação
-RUN dotnet build -c Release -o /app/out
+RUN dotnet build PizzariaAPI.csproj -c Release -o /app/out
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
