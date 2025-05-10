@@ -7,5 +7,6 @@ namespace PizzariaAPI.Controllers.PedidoPagamento
     [ApiController]
     public class PedidoPagamentoController : ControllerBase
     {
+
     }
 }

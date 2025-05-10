@@ -35,6 +35,13 @@ builder.Services.AddScoped<ICategoriaProdutoService, CategoriaProdutoService>();
 builder.Services.AddScoped<IProdutoService, ProdutoService>();
 builder.Services.AddScoped<IClienteService, ClienteService>();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("DevPolicy", builder =>
+    {
+        builder.WithOrigins("http://127.0.0.1:5500").AllowAnyMethod().AllowAnyHeader();
+    });
+});
 
 var app = builder.Build();
 
@@ -46,6 +53,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("DevPolicy");
 
 app.UseAuthorization();
 

@@ -24,25 +24,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "login",
+        "Name": "loginDTO",
         "Type": "PizzariaAPI.DTOS.LoginDTO",
         "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "PizzariaAPI.Controllers.CadastroLogin.AutenticacaoController",
-    "Method": "RedefinirSenha",
-    "RelativePath": "api/Autenticacao/RedefinirSenha",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "email",
-        "Type": "System.String",
-        "IsRequired": false
       }
     ],
     "ReturnTypes": []

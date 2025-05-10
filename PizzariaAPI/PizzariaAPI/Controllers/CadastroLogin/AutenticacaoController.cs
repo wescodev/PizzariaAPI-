@@ -23,12 +23,12 @@ public class AutenticacaoController : ControllerBase
     }
 
     [HttpPost("Login")]
-    public async Task<IActionResult> Login([FromBody] LoginDTO login)
+    public async Task<IActionResult> Login([FromBody] LoginDTO loginDTO)
     {
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
 
-        var pessoa = await _pessoaRepository.GetByEmailOrPhoneAsync(login.Login);
+        var pessoa = await _pessoaRepository.GetByEmailOrPhoneAsync(loginDTO.Login);
 
 
         if (pessoa == null)
@@ -36,7 +36,7 @@ public class AutenticacaoController : ControllerBase
 
         var usuario = await _usuarioRepository.GetByPessoaIdAsync(pessoa.IdPessoa);
    
-        if (usuario == null || usuario.Senha != login.Senha)
+        if (usuario == null || usuario.Senha != loginDTO.Senha)
             return Unauthorized(new { message = "Usuário ou senha incorretos" });
 
 
@@ -53,11 +53,9 @@ public class AutenticacaoController : ControllerBase
 
         try
         {
-            var linkAlteracaoSenha = $"http://localhost:5000/RedefinirSenha?email={pessoa.Email}";
-            var assunto = "Solicitação de Alteração de Senha";
-            var mensagem = $"Olá {pessoa.Nome},\n\nVocê solicitou a alteração de senha. Clique no link abaixo para redefinir sua senha:\n\n{linkAlteracaoSenha}";
+            var mensagem = _emailService.GerarMensagemAlteracaoSenha(pessoa.Nome);
 
-            await _emailService.EnviarEmailAsync(pessoa.Email, assunto, mensagem);
+            await _emailService.EnviarEmailAsync(pessoa.Email, mensagem);
 
             return Ok(new { message = "E-mail de solicitação de alteração de senha enviado." });
         }
@@ -69,28 +67,26 @@ public class AutenticacaoController : ControllerBase
 
 
 
-    [HttpGet("RedefinirSenha")]
-    public async Task<IActionResult> RedefinirSenha([FromQuery] string email)
-    {
-        // Verifica se o e-mail existe no banco
-        var pessoa = await _pessoaRepository.GetByEmailAsync(email);
+    //[HttpGet("RedefinirSenha")]
+    //public async Task<IActionResult> RedefinirSenha([FromQuery] string email)
+    //{
+    //    // Verifica se o e-mail existe no banco
+    //    var pessoa = await _pessoaRepository.GetByEmailAsync(email);
 
-        if (pessoa == null)
-            return NotFound(new { message = "E-mail não encontrado ou inválido." });
+    //    if (pessoa == null)
+    //        return NotFound(new { message = "E-mail não encontrado ou inválido." });
 
-        try
-        {
-            // Redireciona para a página de alterar senha
-            // Aqui usamos o endereço local do seu HTML (apenas para teste local!)
-            var paginaAlterarSenha = $"file:///C:/Users/wesle/Downloads/cs-20250503T030623Z-001/cs/alterarSenha.html?email={email}";
+    //    try
+    //    {
+    //        var paginaAlterarSenha = $"file:///C:/Users/wesle/Downloads/cs-20250503T030623Z-001/cs/alterarSenha.html?email={email}";
 
-            return Redirect(paginaAlterarSenha);
-        }
-        catch (Exception ex)
-        {
-            return StatusCode(500, new { message = $"Erro ao redirecionar: {ex.Message}" });
-        }
-    }
+    //        return Redirect(paginaAlterarSenha);
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        return StatusCode(500, new { message = $"Erro ao redirecionar: {ex.Message}" });
+    //    }
+    //}
 
 
 
