@@ -1,12 +1,17 @@
+# Etapa 1: build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+
+COPY PizzariaAPI/PizzariaAPI.csproj PizzariaAPI/
+RUN dotnet restore PizzariaAPI/PizzariaAPI.csproj
+
+COPY PizzariaAPI/ PizzariaAPI/
+WORKDIR /src/PizzariaAPI
+RUN dotnet publish -c Release -o /app/publish
+
+# Etapa 2: runtime
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
+COPY --from=build /app/publish .
 
-COPY ./PizzariaAPI/PizzariaAPI.csproj ./PizzariaAPI/
-RUN dotnet restore ./PizzariaAPI/PizzariaAPI.csproj
-
-COPY ./PizzariaAPI/. ./PizzariaAPI/
-WORKDIR /app/PizzariaAPI
-
-RUN dotnet build -c Release -o out
-RUN dotnet publish -c Release -o out
-
-ENTRYPOINT ["dotnet", "out/PizzariaAPI.dll"]
+ENTRYPOINT ["dotnet", "PizzariaAPI.dll"]
