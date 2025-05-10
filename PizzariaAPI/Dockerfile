@@ -6,11 +6,19 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 COPY PizzariaAPI/PizzariaAPI.csproj ./
-RUN rm -rf /src/obj  # Limpeza ANTES do restore
+RUN rm -rf /src/obj
 RUN dotnet restore "PizzariaAPI.csproj"
-COPY . .
+COPY PizzariaAPI ./PizzariaAPI
+COPY *.cs ./
+# Copie outras pastas de código-fonte conforme necessário (Repositories, Services, Controllers, etc.)
+# Exemplo: COPY Repositories ./Repositories
+#          COPY Services ./Services
+#          COPY Controllers ./Controllers
+COPY appsettings*.json ./
+COPY *.json ./
+
 WORKDIR "/src/."
-RUN rm -rf /src/obj  # Limpeza ANTES do build
+RUN rm -rf /src/obj
 RUN dotnet build "PizzariaAPI.csproj" -c Release -o /app/build
 
 FROM build AS publish
