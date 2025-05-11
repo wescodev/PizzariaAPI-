@@ -1,14 +1,17 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
+# Navegar para a pasta onde o arquivo de projeto está
+WORKDIR /app/PizzariaAPI
+
 # Copiar o arquivo de projeto
 COPY PizzariaAPI.csproj ./
 
 # Restaurar as dependências
 RUN dotnet restore
 
-# Copiar todo o código-fonte
-COPY . ./
+# Copiar todo o código-fonte (relativo ao diretório do Dockerfile)
+COPY ../. ./
 
 # Remover a pasta obj ANTES da build
 RUN rm -rf obj
