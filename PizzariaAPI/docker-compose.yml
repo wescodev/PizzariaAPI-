@@ -1,0 +1,5 @@
+services:
+  api:
+    image: "weszin/pizzaria-api"
+    ports:
+      - "3000:7054"  # Mapeando a porta 7054 do container para a porta 3000 da sua máquina host

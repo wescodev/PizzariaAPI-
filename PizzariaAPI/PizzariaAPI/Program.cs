@@ -24,7 +24,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 builder.Services.AddScoped<EmailService>();
 
-//registro do repositório
+//registro do repositï¿½rio
 builder.Services.AddScoped<ICategoriaProdutoRepository, CategoriaProdutoRepository>();
 builder.Services.AddScoped<IPessoaRepository, PessoaRepository>();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
@@ -45,12 +45,9 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+ app.UseSwagger();
+ app.UseSwaggerUI();
+
 
 app.UseHttpsRedirection();
 

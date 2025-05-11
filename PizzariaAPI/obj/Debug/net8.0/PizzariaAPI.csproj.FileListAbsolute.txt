@@ -1,0 +1,8 @@
+C:\Users\wesle\source\UninoveProjeto\PizzariaAPI-\PizzariaAPI\obj\Debug\net8.0\PizzariaAPI.csproj.AssemblyReference.cache
+C:\Users\wesle\source\UninoveProjeto\PizzariaAPI-\PizzariaAPI\obj\Debug\net8.0\PizzariaAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wesle\source\UninoveProjeto\PizzariaAPI-\PizzariaAPI\obj\Debug\net8.0\PizzariaAPI.AssemblyInfoInputs.cache
+C:\Users\wesle\source\UninoveProjeto\PizzariaAPI-\PizzariaAPI\obj\Debug\net8.0\PizzariaAPI.AssemblyInfo.cs
+C:\Users\wesle\source\UninoveProjeto\PizzariaAPI-\PizzariaAPI\obj\Debug\net8.0\PizzariaAPI.csproj.CoreCompileInputs.cache
+C:\Users\wesle\source\UninoveProjeto\PizzariaAPI-\PizzariaAPI\obj\Debug\net8.0\PizzariaAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\wesle\source\UninoveProjeto\PizzariaAPI-\PizzariaAPI\obj\Debug\net8.0\PizzariaAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\wesle\source\UninoveProjeto\PizzariaAPI-\PizzariaAPI\obj\Debug\net8.0\PizzariaAPI.sourcelink.json

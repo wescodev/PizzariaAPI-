@@ -1,25 +1,15 @@
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /app
+FROM mcr.microsoft.com/dotnet/sdk:8.0@sha256:35792ea4ad1db051981f62b313f1be3b46b1f45cadbaa3c288cd0d3056eefb83 AS build
+WORKDIR /App
 
-# Copiar a pasta raiz do projeto (PizzariaAPI) para /app
-COPY PizzariaAPI ./
-
-# Definir o diretório de trabalho para dentro da pasta do projeto
-WORKDIR /app/PizzariaAPI
-
-# Restaurar as dependências
-RUN dotnet restore PizzariaAPI.csproj
-
-# Copiar o restante dos arquivos (já dentro da pasta correta)
+# Copy everything
 COPY . ./
+# Restore as distinct layers
+RUN dotnet restore
+# Build and publish a release
+RUN dotnet publish -o out
 
-# Remover a pasta obj ANTES da build
-RUN rm -rf obj
-
-# Build da aplicação
-RUN dotnet build PizzariaAPI.csproj -c Release -o /app/out
-
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
-WORKDIR /app
-COPY --from=build /app/out ./
+# Build runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:8.0@sha256:6c4df091e4e531bb93bdbfe7e7f0998e7ced344f54426b7e874116a3dc3233ff
+WORKDIR /App
+COPY --from=build /App/out .
 ENTRYPOINT ["dotnet", "PizzariaAPI.dll"]
