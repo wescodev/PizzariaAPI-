@@ -44,9 +44,9 @@ public class AutenticacaoController : ControllerBase
     }
 
     [HttpPost("SolicitarAlteracaoSenha")]
-    public async Task<IActionResult> SolicitarAlteracaoSenha([FromBody] string email)
+    public async Task<IActionResult> SolicitarAlteracaoSenha([FromBody] EmailRequestDTO email)
     {
-        var pessoa = await _pessoaRepository.GetByEmailAsync(email);
+        var pessoa = await _pessoaRepository.GetByEmailAsync(email.Email);
 
         if (pessoa == null)
             return NotFound(new { message = "E-mail não encontrado." });

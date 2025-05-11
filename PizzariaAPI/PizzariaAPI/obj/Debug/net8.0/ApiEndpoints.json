@@ -41,7 +41,7 @@
     "Parameters": [
       {
         "Name": "email",
-        "Type": "System.String",
+        "Type": "PizzariaAPI.DTOS.EmailRequestDTO",
         "IsRequired": true
       }
     ],
