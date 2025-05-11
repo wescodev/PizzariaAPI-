@@ -1,22 +1,26 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
-# Navegar para a pasta onde o arquivo de projeto está
+# Definir o diretório de trabalho para onde o projeto está
 WORKDIR /app/PizzariaAPI
 
-# Copiar o arquivo de projeto
+# Copiar apenas o arquivo de projeto explicitamente
 COPY PizzariaAPI.csproj ./
 
 # Restaurar as dependências
 RUN dotnet restore
 
-# Copiar todo o código-fonte (relativo ao diretório do Dockerfile)
-COPY ../. ./
+# Voltar para a raiz para copiar o restante do código
+WORKDIR /app
+
+# Copiar a pasta PizzariaAPI que contém o código
+COPY PizzariaAPI/PizzariaAPI ./PizzariaAPI
 
 # Remover a pasta obj ANTES da build
 RUN rm -rf obj
 
 # Build da aplicação
+WORKDIR /app/PizzariaAPI
 RUN dotnet build PizzariaAPI.csproj -c Release -o /app/out
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
