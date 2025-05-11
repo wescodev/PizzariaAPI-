@@ -2,11 +2,16 @@
   {
     "ContainingType": "PizzariaAPI.Controllers.CadastroLogin.AutenticacaoController",
     "Method": "AlterarSenha",
-    "RelativePath": "api/Autenticacao/alterarSenha",
+    "RelativePath": "api/Autenticacao/alterarSenha/{email}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      },
       {
         "Name": "request",
         "Type": "PizzariaAPI.DTOS.AlterarSenhaRequestDTO",

@@ -53,7 +53,7 @@ public class AutenticacaoController : ControllerBase
 
         try
         {
-            var mensagem = _emailService.GerarMensagemAlteracaoSenha(pessoa.Nome);
+            var mensagem = _emailService.GerarMensagemAlteracaoSenha(pessoa.Nome, pessoa.Email);
 
             await _emailService.EnviarEmailAsync(pessoa.Email, mensagem);
 
@@ -91,19 +91,24 @@ public class AutenticacaoController : ControllerBase
 
 
 
-    [HttpPost("alterarSenha")]
-    public async Task<IActionResult> AlterarSenha([FromBody] AlterarSenhaRequestDTO request)
+    [HttpPost("alterarSenha/{email}")]
+    public async Task<IActionResult> AlterarSenha(string email, [FromBody] AlterarSenhaRequestDTO request)
     {
-        if (string.IsNullOrWhiteSpace(request.Email) || string.IsNullOrWhiteSpace(request.NovaSenha))
-            return BadRequest(new { message = "E-mail e nova senha são obrigatórios." });
-
-        var pessoa = await _pessoaRepository.GetByEmailAsync(request.Email);
-        if (pessoa == null)
-            return NotFound(new { message = "E-mail não encontrado." });
+        if (request.NovaSenha != request.ConfirmarSenha)
+        {
+            return BadRequest(new { message = "Nova senha e confirmação de senha não coincidem." });
+        }
 
         try
         {
-            await _usuarioRepository.AlterarSenhaAsync(pessoa.IdPessoa, request.NovaSenha);
+            var usuario = await _pessoaRepository.GetByEmailAsync(email);
+
+            if(usuario == null)
+            {
+                return NotFound(new { message = "Usuário não encontrado." });
+            }
+
+            await _usuarioRepository.AlterarSenhaAsync(usuario.IdPessoa, request.NovaSenha);
 
             return Ok(new { message = "Senha alterada com sucesso." });
         }

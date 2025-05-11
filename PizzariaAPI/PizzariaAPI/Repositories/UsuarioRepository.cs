@@ -23,6 +23,7 @@ namespace PizzariaAPI.Repositories
             await _context.SaveChangesAsync();
         }
 
+
         public async Task<Usuario> GetByPessoaIdAsync(int IdPessoa)
         {
             var usuario = await _context.Usuario.FirstOrDefaultAsync(u => u.IdPessoa == IdPessoa);
