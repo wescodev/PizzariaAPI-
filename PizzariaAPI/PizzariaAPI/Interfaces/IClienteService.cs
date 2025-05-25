@@ -5,6 +5,6 @@ namespace PizzariaAPI.Interfaces
     public interface IClienteService
     {
         Task<string> CriarCadastroClienteAsync(ClienteCadastroDTO cadastro);
-        Task<string> ObterEnderecoFormatadoDoClienteAsync(int idCliente);
+        Task<EnderecoDTO> ObterEnderecoFormatadoDoClienteAsync(int idCliente);
     }
 }

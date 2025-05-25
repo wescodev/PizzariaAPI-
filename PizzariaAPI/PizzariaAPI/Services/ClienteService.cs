@@ -85,23 +85,33 @@ namespace PizzariaAPI.Services
                         Console.WriteLine($"PostgreSQL Constraint: {pgEx.ConstraintName}");
                     }
                 }
-                throw; // repassa o erro para o Controller
+                throw; 
             }
     
         }
 
-       public async Task<string> ObterEnderecoFormatadoDoClienteAsync(int idCliente)
+       public async Task<EnderecoDTO> ObterEnderecoFormatadoDoClienteAsync(int idCliente)
         {
-            // Usa o repositório para buscar a Pessoa com o Endereco
+         
             var pessoa = await _pessoaRepository.ObterPessoaComEnderecoPorIdAsync(idCliente);
 
             if (pessoa == null || pessoa.Endereco == null)
             {
-                throw new Exception("Cliente ou endereço não encontrado.");
+                return null;
             }
 
             var endereco = pessoa.Endereco;
-            return $"{endereco.NmEndereco}, {endereco.Cidade}, {endereco.Estado ?? "N/A"}, {endereco.CEP}";
+
+            var enderecoDTO = new EnderecoDTO
+            {
+                NmEndereco = endereco.NmEndereco,
+                Cidade = endereco.Cidade,
+                Estado = endereco.Estado,
+                Cep = endereco.CEP 
+            };
+
+            return enderecoDTO;
         }
+
     }
 }

@@ -41,11 +41,12 @@ public class ClienteController : ControllerBase
     {
         try
         {
-            var enderecoFormatado = await _clienteService.ObterEnderecoFormatadoDoClienteAsync(idCliente);
-            if (string.IsNullOrWhiteSpace(enderecoFormatado) || enderecoFormatado.Contains("N/A"))
+            var endereco = await _clienteService.ObterEnderecoFormatadoDoClienteAsync(idCliente);
+            if (endereco == null)           
                 return NotFound(new { message = "Endereço do cliente não encontrado." });
 
-            return Ok(enderecoFormatado);
+
+            return Ok(endereco);
         }
         catch (Exception ex)
         {
