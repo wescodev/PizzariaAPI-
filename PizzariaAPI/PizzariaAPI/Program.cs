@@ -6,7 +6,8 @@ using PizzariaAPI.Interfaces.Repositories;
 using PizzariaAPI.Repositories;
 using PizzariaAPI.Services;
 using System;
-
+using Npgsql.EntityFrameworkCore.PostgreSQL;
+//using Npgsql.EntityFrameworkCore.PostgreSQL; // <--- ESTE USING FOI ADICIONADO AQUI!
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,16 +18,16 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseMySql(
-        builder.Configuration.GetConnectionString("DefaultConnection"),
-        ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))
+    options.UseNpgsql( // <--- AGORA ESTÁ USANDO NPGSQL
+        builder.Configuration.GetConnectionString("DefaultConnection")
+    // A linha "ServerVersion.AutoDetect" foi removida pois é específica do MySQL
     ));
 
 builder.Services.AddScoped<EmailService>();
 
-//registro do reposit�rio
+//registro do repositório
 builder.Services.AddScoped<ICategoriaProdutoRepository, CategoriaProdutoRepository>();
-builder.Services.AddScoped<IPessoaRepository, PessoaRepository>();
+builder.Services.AddScoped<IPessoaRepository, PessoaRepository>(); // Corrigido para a interface correta
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
 
@@ -45,8 +46,8 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
- app.UseSwagger();
- app.UseSwaggerUI();
+app.UseSwagger();
+app.UseSwaggerUI();
 
 
 app.UseHttpsRedirection();

@@ -60,7 +60,7 @@ namespace PizzariaAPI.Services
                 IdPessoa = pessoa.IdPessoa,
                 UsuarioLogin = pessoa.Email,
                 Senha = cadastro.Senha,
-                DataExpiracao = DateTime.Now.AddMonths(1)
+                DataExpiracao = DateTime.UtcNow.AddMonths(1)
             };
             _context.Usuario.Add(novoUsuario);
             await _context.SaveChangesAsync();
@@ -68,11 +68,23 @@ namespace PizzariaAPI.Services
             await transaction.CommitAsync();
             return "Login cadastrado com sucesso!";
         }
-        catch (Exception)
+        catch (Exception ex)
         {
             await transaction.RollbackAsync();
-            throw; // repassa o erro para o Controller
-        }
+                Console.WriteLine($"Erro ao criar cadastro de cliente: {ex.Message}");
+                if (ex.InnerException != null)
+                {
+                    Console.WriteLine($"Inner Exception: {ex.InnerException.Message}");
+                    // Se for um DbUpdateException, podemos tentar pegar mais detalhes
+                    if (ex.InnerException is Npgsql.PostgresException pgEx)
+                    {
+                        Console.WriteLine($"PostgreSQL Error Code: {pgEx.SqlState}");
+                        Console.WriteLine($"PostgreSQL Detail: {pgEx.Detail}");
+                        Console.WriteLine($"PostgreSQL Constraint: {pgEx.ConstraintName}");
+                    }
+                }
+                throw; // repassa o erro para o Controller
+            }
     
         }
     }
