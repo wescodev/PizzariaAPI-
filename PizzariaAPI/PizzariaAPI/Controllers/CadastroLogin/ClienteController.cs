@@ -36,7 +36,24 @@ public class ClienteController : ControllerBase
             return BadRequest(new { message = ex.Message });
         }
     }
+    [HttpGet("endereco/{idCliente}")]
+    public async Task<IActionResult> ObterEnderecoCliente(int idCliente)
+    {
+        try
+        {
+            var enderecoFormatado = await _clienteService.ObterEnderecoFormatadoDoClienteAsync(idCliente);
+            if (string.IsNullOrWhiteSpace(enderecoFormatado) || enderecoFormatado.Contains("N/A"))
+                return NotFound(new { message = "Endereço do cliente não encontrado." });
+
+            return Ok(enderecoFormatado);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { message = $"Erro ao obter endereço do cliente: {ex.Message}" });
+
+        }
 
 
 
+    }
 }

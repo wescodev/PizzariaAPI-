@@ -89,6 +89,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "PizzariaAPI.Controllers.CadastroLogin.ClienteController",
+    "Method": "ObterEnderecoCliente",
+    "RelativePath": "api/Cliente/endereco/{idCliente}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idCliente",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "PizzariaAPI.Controllers.Produto.ProdutoController",
     "Method": "ObterTodos",
     "RelativePath": "api/Produto",

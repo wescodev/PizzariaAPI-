@@ -13,9 +13,10 @@ namespace PizzariaAPI.Services
         private readonly ApplicationDbContext _context;
         private readonly IPessoaRepository _pessoaRepository;
 
-        public ClienteService(ApplicationDbContext context)
+        public ClienteService(ApplicationDbContext context, IPessoaRepository pessoaRepository)
         {
             _context = context;
+            _pessoaRepository = pessoaRepository;
         }
 
         public async Task<string> CriarCadastroClienteAsync(ClienteCadastroDTO cadastro)

@@ -7,6 +7,6 @@ public class Pessoa
     public string Email { get; set; }
     public string CPF { get; set; }
     public string Telefone { get; set; }
-    public int IdEndereco { get; set; } // Chave estrangeira
+    public int IdEndereco { get; set; } 
     public Endereco Endereco { get; set; } // Relacionamento
 }
