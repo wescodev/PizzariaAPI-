@@ -40,7 +40,12 @@ public class AutenticacaoController : ControllerBase
             return Unauthorized(new { message = "Usuário ou senha incorretos" });
 
 
-        return Ok(new { message = "Login bem-sucedido!" });
+        return Ok(new 
+            { message = "Login bem-sucedido!",
+              idCliente = pessoa.IdPessoa,
+              email = pessoa.Email,
+              nome = pessoa.Nome
+            });
     }
 
     [HttpPost("SolicitarAlteracaoSenha")]
