@@ -20,7 +20,8 @@ public class EnderecoConfiguration : IEntityTypeConfiguration<Endereco>
                .HasColumnType("VARCHAR(9)") 
                .IsRequired();
 
-        builder.Property(e => e.Numero)
+        builder.Property(e => e.Estado)
+                .HasColumnType("VARCHAR(2)")
                .IsRequired();
 
         builder.Property(e => e.Cidade)

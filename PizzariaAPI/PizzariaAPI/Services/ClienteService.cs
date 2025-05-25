@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using PizzariaAPI.Data;
 using PizzariaAPI.DTOS;
 using PizzariaAPI.Interfaces;
+using PizzariaAPI.Interfaces.IRepositories;
 using PizzariaAPI.Models;
 
 namespace PizzariaAPI.Services
@@ -10,6 +11,7 @@ namespace PizzariaAPI.Services
     public class ClienteService : IClienteService
     {
         private readonly ApplicationDbContext _context;
+        private readonly IPessoaRepository _pessoaRepository;
 
         public ClienteService(ApplicationDbContext context)
         {
@@ -38,7 +40,7 @@ namespace PizzariaAPI.Services
             {
                 NmEndereco = cadastro.NmEndereco,
                 CEP = cadastro.CEP,
-                Numero = cadastro.Numero,
+                Estado = cadastro.Estado,
                 Cidade = cadastro.Cidade
             };
             _context.Endereco.Add(endereco);
@@ -75,7 +77,6 @@ namespace PizzariaAPI.Services
                 if (ex.InnerException != null)
                 {
                     Console.WriteLine($"Inner Exception: {ex.InnerException.Message}");
-                    // Se for um DbUpdateException, podemos tentar pegar mais detalhes
                     if (ex.InnerException is Npgsql.PostgresException pgEx)
                     {
                         Console.WriteLine($"PostgreSQL Error Code: {pgEx.SqlState}");
@@ -86,6 +87,20 @@ namespace PizzariaAPI.Services
                 throw; // repassa o erro para o Controller
             }
     
+        }
+
+       public async Task<string> ObterEnderecoFormatadoDoClienteAsync(int idCliente)
+        {
+            // Usa o repositório para buscar a Pessoa com o Endereco
+            var pessoa = await _pessoaRepository.ObterPessoaComEnderecoPorIdAsync(idCliente);
+
+            if (pessoa == null || pessoa.Endereco == null)
+            {
+                throw new Exception("Cliente ou endereço não encontrado.");
+            }
+
+            var endereco = pessoa.Endereco;
+            return $"{endereco.NmEndereco}, {endereco.Cidade}, {endereco.Estado ?? "N/A"}, {endereco.CEP}";
         }
     }
 }

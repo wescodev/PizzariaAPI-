@@ -7,6 +7,6 @@ namespace PizzariaAPI.Interfaces.IRepositories
     {
         Task<Pessoa> GetByEmailOrPhoneAsync(string login);
         Task<Pessoa> GetByEmailAsync(string email);
-
+        Task<Pessoa> ObterPessoaComEnderecoPorIdAsync(int idPessoa);
     }
 }

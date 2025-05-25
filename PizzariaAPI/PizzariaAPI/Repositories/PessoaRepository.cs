@@ -20,5 +20,10 @@ namespace PizzariaAPI.Repositories
         {
             return _dbSet.FirstOrDefaultAsync(p => p.Email == login || p.Telefone == login);
         }
+
+        public Task<Pessoa> ObterPessoaComEnderecoPorIdAsync(int idPessoa)
+        {
+            return _dbSet.Include(p => p.Endereco).FirstOrDefaultAsync(p => p.IdPessoa == idPessoa);
+        }
     }
 }
