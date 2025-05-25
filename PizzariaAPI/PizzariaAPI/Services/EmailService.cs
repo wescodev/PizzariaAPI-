@@ -27,7 +27,7 @@ public class EmailService
 
   public string GerarMensagemAlteracaoSenha(string nome, string email)
     {
-        var linkAlteracaoSenha = $"http://127.0.0.1:5500/alterarSenha.html?email={Uri.EscapeDataString(email)}";
+        var linkAlteracaoSenha = $"https://martiniclayton.github.io/belapizza/alterarSenha.html?email={Uri.EscapeDataString(email)}";
 
         return $@"
         <html>
